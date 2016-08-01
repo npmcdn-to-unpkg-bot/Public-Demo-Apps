@@ -1,4 +1,7 @@
+
+// Replace the API_Key with your own API_Key
 var API_KEY = "11fba5787f3777f18fda5dcdba976e74ef411777527e2315e5f586689497ba68"
+
 var sharingMessage = "Hello, We think you'll be interested in these drugs: {{wrap}}"
 
 var returnedPageCount = 250;

@@ -1,5 +1,8 @@
 //constants
-var wrapclient = new Wrap("cfccabbfe849b821f659ab972285c4102d0c4c8a9e3223d1413898e56f189421", "https://wrapi.wrap.co/api");
+//Replace with your own API Key
+API_KEY = "00000000000000000000000000000000000000000000000000000000000000000"
+
+var wrapclient = new Wrap(API_KEY);
 
 var templateWrapName = "Wander Ticket Demo"; 
 

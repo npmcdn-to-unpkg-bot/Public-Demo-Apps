@@ -1,5 +1,8 @@
+// Replace with your personal API_Key
+
+API_KEY = "00000000000000000000000000000000000000000000000000000000000000000"
 //constants
-var wrapclient = new Wrap("e81c479a59c6fb872378335763acb0cb820d5497150a955d7d90fe0792502ea3", "https://wrapi.wrap.co/api");
+var wrapclient = new Wrap(API_KEY);
 
 var introCardID = "f1c99b38-bf26-4be1-8cf3-e631c1b017c7";
 var templateCardID = "bc848e2f-915c-4748-b3a3-2842f19481fe";

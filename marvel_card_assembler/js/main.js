@@ -1,8 +1,5 @@
-API_KEY = "7b1a08a96c92edbc65ae2a7502c38a39c632d9164a0c2b3d4f08dccc2ed06048"
-
-// Wrap User Account = joshmarvel
-// email josh+marvel@wrap.co
-
+//Replace with your own API Key
+API_KEY = "00000000000000000000000000000000000000000000000000000000000000000"
 
 client = new Wrap(API_KEY, "https://api.wrap.co/api")
 var sharingMessage = "Hello, Here's your Marvel Wrap: {{wrap}} Excelsior!"
