@@ -1,0 +1,32 @@
+{
+  "trips":
+  [ 
+    {
+      "trip_id" : 1,
+      "trip_name" : "8 Day Columbia Adventure",
+      "trip_subtitle" : "Cusco Lares Region and Environs",
+      "trip_img" : "https://static.gate1travel.com/shared/india/features/taj.jpg",
+      "cur_price" : 1750,
+      "list_price" : 2590,
+      "trip_url" : "https://www.gate1travel.com/thedeal/160215/scotland.aspx?utm_source=thedeal&utm_medium=email&utm_term=160215&utm_campaign=scotland&advid=6ef64139-b9ae-42e8-9c9e-eda0022b00cf"
+    },
+    {
+      "trip_id" : 2,
+      "trip_name" : "9 Day Columbia Adventure",
+      "trip_subtitle" : "Cusco Lares Region and Environs",
+      "trip_img" : "https://static.gate1travel.com/shared/india/features/taj.jpg",
+      "cur_price" : 1750,
+      "list_price" : 2590,
+      "trip_url" : "https://www.gate1travel.com/thedeal/160215/scotland.aspx?utm_source=thedeal&utm_medium=email&utm_term=160215&utm_campaign=scotland&advid=6ef64139-b9ae-42e8-9c9e-eda0022b00cf"
+    },
+    {
+      "trip_id" : 3,
+      "trip_name" : "10 Day Columbia Adventure",
+      "trip_subtitle" : "Cusco Lares Region and Environs",
+      "trip_img" : "https://static.gate1travel.com/shared/india/features/taj.jpg",
+      "cur_price" : 1750,
+      "list_price" : 2590,
+      "trip_url" : "https://www.gate1travel.com/thedeal/160215/scotland.aspx?utm_source=thedeal&utm_medium=email&utm_term=160215&utm_campaign=scotland&advid=6ef64139-b9ae-42e8-9c9e-eda0022b00cf"
+    }
+  ]
+} 

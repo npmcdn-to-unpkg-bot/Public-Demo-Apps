@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ticket Time</title>
+    <!-- Include the CSS -->
+    <link href="assets/css/toolkit.css" rel="stylesheet">
+    <link href="assets/css/application.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker-standalone.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.css" />
+</head>
+
+<body class="with-top-navbar">
+    <div class="container-fluid">
+        <div class="growl" id="app-growl"></div>
+        <nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/wander2.png" alt="brand">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-collapse-main">
+                <ul class="nav navbar-nav hidden-xs">
+                    <li class="active">
+                        <a data-toggle="modal" href="#msgModal">Home</a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" href="#msgModal">Profile</a>
+                    </li>
+                    <li>
+                        <a data-toggle="modal" href="#msgModal">Messages</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
+                    <li>
+                        <a class="app-notifications">
+                            <span class="icon icon-bell"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover" data-original-title="" title="">
+                            <img class="img-circle" src="assets/img/model-019.png">
+                        </button>
+                    </li>
+                </ul>
+                <form id="searchform" class="navbar-form navbar-right app-search" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" data-action="grow" placeholder="Search">
+                    </div>
+                </form>
+                <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="notifications/index.html">Notifications</a></li>
+                    <li><a data-toggle="modal" href="#msgModal">Messages</a></li>
+                    <li><a href="#" data-action="growl">Growl</a></li>
+                    <li><a href="login/index.html">Logout</a></li>
+                </ul>
+                <ul class="nav navbar-nav hidden">
+                    <li><a href="#" data-action="growl">Growl</a></li>
+                    <li><a href="login/index.html">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="controller" class="col-md-9 panel panel-default">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-heading">
+                        <h3 class="" style="padding-top: 20px;">Enter your Customer Infomation</h3>
+                        <p class="text-right h5" style="margin-top: -30px;">
+                            Step <span id="step_1" class="badge alert-warning">1</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <form id="step_1_form" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="passenger_name" class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="passenger_name" placeholder="Jane Doe">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="passenger_email" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="passenger_email" placeholder="name@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="passenger_phone" class="col-sm-2 control-label">Phone Number</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="passenger_phone" placeholder="415-555-1212">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="departure_date" class="col-sm-2 control-label">Trip Date</label>
+                        <div class="col-sm-8">
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' id="departure_date" placeholder="February 19, 2016" class="form-control" />
+                                <span class="input-group-addon">
+                                <span class="icon icon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-heading">
+                                <h3 class="">Select the Trip and Related Editorial</h3>
+                                <p class="text-right h5" style="margin-top: -30px;">
+                                    Step <span class="badge alert-success">2</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="trip" class="col-sm-2 control-label">Trip</label>
+                            <div class="col-sm-8">
+                                <select id="trip" class="custom-select">
+                                    <option data-id="1">8 Day Columbia Adventure</option>
+                                    <option data-id="2">Glassbottom Boat Cruise in Kona</option>
+                                    <option data-id="3">Surf Adventure in Nicaragua</option>
+                                    <option data-id="4">Mona Lisa & Best of the Louvre</option>
+                                    <option data-id="5">Casamagna Marriott Cancun Resort</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="story" class="col-sm-2 control-label">Editorial</label>
+                            <div class="col-sm-8">
+                                <select id="story" class="custom-select">
+                                    <option data-id="1">The world with Dean Karnazes</option>
+                                    <option selected="true" data-id="2">Another day in paradise</option>
+                                    <option data-id="3">Michael Mina's warm up</option>
+                                    <option data-id="4">Tips on swimming to Alcatraz</option>
+                                    <option data-id="5">Ironman Championship</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                        <label for="story" class="col-sm-2 control-label"></label>
+                            <div class="col-sm-8">
+                            <div class="preview">
+                                <img id="trip_preview_img" src="images/trips/1.jpg">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="story" class="col-sm-2 control-label"></label>
+                            <div class="col-sm-8">
+                            <div class="preview">
+                                <img id="story_preview_img" src="images/editorials/2.jpg">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-heading">
+                                <h3 class="">Choose Related Products for the Trip</h3>
+                                <p class="text-right h5" style="margin-top: -30px;">
+                                    Step <span class="badge alert-success">3</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="product1" class="control-label">Product</label>
+                            <div class="">
+                                <select id="product1" class="custom-select">
+                                    <option selected="true" data-id="1">Galapagos Day Bag</option>
+                                    <option data-id="2">Light Hiking Bag</option>
+                                    <option data-id="3">Unisex Hiking Socks</option>
+                                    <option data-id="4">Mens Swim Suit </option>
+                                    <option data-id="5">TYR Athletic Swim suit </option>
+                                    <option data-id="6">Banana Boat Sunscreen Ult</option>
+                                    <option data-id="7">ATTCL® Polarized Sunglass</option>
+                                    <option data-id="8">JOTO Cell Phone Dry Bag</option>
+                                    <option data-id="9">Fifty/Fifty Insulated Sta</option>
+                                    <option data-id="10">Strathmore Drawing Pad</option>
+                                    <option data-id="11">The Da Vinci Code: Specia</option>
+                                    <option data-id="12">Merell Womens Walking Sho</option>
+                                    <option data-id="13">Merell Mens Walking Shoe </option>
+                                    <option data-id="14">Cancun Travel Book </option>
+                                    <option data-id="15">Uplure Girl Women Halter </option>
+                                    <option data-id="16">Reef Men's Fanning Sandal</option>
+                                    <option data-id="17">Hawaiian Tropic Dark Tann</option>
+                                    <option data-id="18">180 Snorkeling Mask</option>
+                                    <option data-id="19">AmazonBasics RFID Travel </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="product2" class="control-label">Product</label>
+                            <div class="">
+                                <select id="product2" class="custom-select">
+                                    <option data-id="1">Galapagos Day Bag</option>
+                                    <option selected="true" data-id="2">Light Hiking Bag</option>
+                                    <option data-id="3">Unisex Hiking Socks</option>
+                                    <option data-id="4">Mens Swim Suit </option>
+                                    <option data-id="5">TYR Athletic Swim suit </option>
+                                    <option data-id="6">Banana Boat Sunscreen Ult</option>
+                                    <option data-id="7">ATTCL® Polarized Sunglass</option>
+                                    <option data-id="8">JOTO Cell Phone Dry Bag</option>
+                                    <option data-id="9">Fifty/Fifty Insulated Sta</option>
+                                    <option data-id="10">Strathmore Drawing Pad</option>
+                                    <option data-id="11">The Da Vinci Code: Specia</option>
+                                    <option data-id="12">Merell Womens Walking Sho</option>
+                                    <option data-id="13">Merell Mens Walking Shoe </option>
+                                    <option data-id="14">Cancun Travel Book </option>
+                                    <option data-id="15">Uplure Girl Women Halter </option>
+                                    <option data-id="16">Reef Men's Fanning Sandal</option>
+                                    <option data-id="17">Hawaiian Tropic Dark Tann</option>
+                                    <option data-id="18">180 Snorkeling Mask</option>
+                                    <option data-id="19">AmazonBasics RFID Travel </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="product3" class="control-label">Product</label>
+                            <div class="">
+                                <select id="product3" class="custom-select">
+                                    <option data-id="1">Galapagos Day Bag</option>
+                                    <option data-id="2">Light Hiking Bag</option>
+                                    <option selected="true" data-id="3">Unisex Hiking Socks</option>
+                                    <option data-id="4">Mens Swim Suit </option>
+                                    <option data-id="5">TYR Athletic Swim suit </option>
+                                    <option data-id="6">Banana Boat Sunscreen Ult</option>
+                                    <option data-id="7">ATTCL® Polarized Sunglass</option>
+                                    <option data-id="8">JOTO Cell Phone Dry Bag</option>
+                                    <option data-id="9">Fifty/Fifty Insulated Sta</option>
+                                    <option data-id="10">Strathmore Drawing Pad</option>
+                                    <option data-id="11">The Da Vinci Code: Specia</option>
+                                    <option data-id="12">Merell Womens Walking Sho</option>
+                                    <option data-id="13">Merell Mens Walking Shoe </option>
+                                    <option data-id="14">Cancun Travel Book </option>
+                                    <option data-id="15">Uplure Girl Women Halter </option>
+                                    <option data-id="16">Reef Men's Fanning Sandal</option>
+                                    <option data-id="17">Hawaiian Tropic Dark Tann</option>
+                                    <option data-id="18">180 Snorkeling Mask</option>
+                                    <option data-id="19">AmazonBasics RFID Travel </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="preview">
+                                <img id="product_preview_img1" src="images/products/1.jpg">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="preview">
+                                <img id="product_preview_img2" src="images/products/2.jpg">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="preview">
+                                <img id="product_preview_img3" src="images/products/3.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-heading">
+                        <h3 class="">Choose Related Trip Offers</h3>
+                        <p class="text-right h5" style="margin-top: -30px;">
+                            Step <span class="badge alert-success">4</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="trip_offer_1" class="control-label">Offer 1</label>
+                    <div class="">
+                        <select id="trip_offer_1" class="custom-select">
+                            <option data-id="1">8 Day Columbia Adventure</option>
+                            <option data-id="2">Glassbottom Boat Cruise in Kona</option>
+                            <option data-id="3">Surf Adventure in Nicaragua</option>
+                            <option data-id="4">Mona Lisa & Best of the Louvre</option>
+                            <option selected="true" data-id="5">Casamagna Marriott Cancun Resort</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                   <label for="trip_offer_2" class="control-label">Offer 2</label>
+                    <div class="">
+                        <select id="trip_offer_2" class="custom-select">
+                            <option data-id="1">8 Day Columbia Adventure</option>
+                            <option data-id="2">Glassbottom Boat Cruise in Kona</option>
+                            <option data-id="3">Surf Adventure in Nicaragua</option>
+                            <option selected="true" data-id="4">Mona Lisa & Best of the Louvre</option>
+                            <option data-id="5">Casamagna Marriott Cancun Resort</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="trip_offer_3" class="control-label">Offer 3</label>
+                    <div class="">
+                        <select id="trip_offer_3" class="custom-select">
+                            <option data-id="1">8 Day Columbia Adventure</option>
+                            <option data-id="2">Glassbottom Boat Cruise in Kona</option>
+                            <option selected="true" data-id="3">Surf Adventure in Nicaragua</option>
+                            <option data-id="4">Mona Lisa & Best of the Louvre</option>
+                            <option data-id="5">Casamagna Marriott Cancun Resort</option>
+                        </select>
+                    </div>
+                </div>                                
+            </div>
+            <div class="row bottom">
+                <div class="col-md-4">
+                    <div class="col-sm-8 preview">
+                        <img id="trip_offer_img1" src="images/trips/5.jpg">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="col-sm-8 preview">
+                        <img id="trip_offer_img2" src="images/trips/4.jpg">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="col-sm-8 preview">
+                        <img id="trip_offer_img3" src="images/trips/3.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="side_bar" class="panel panel-default sidebar-nav-fixed affix" style="margin-top: 20px;">
+                <div class="panel-body">
+                    <h5 class="m-t-0">Send Wrap</h5>
+                    <ul class="list-unstyled list-spaced">
+                        <li>
+                            <div class="form-group">
+                                <button id="send_wrap_text" type="button" class="btn btn-lg btn-pill btn-primary disabled">
+                                    <span class="icon icon-chat"></span> Send Wrap Via Text &nbsp;</button>
+                            </div>
+                            <!--div class="form-group">
+                                <button id="send_wrap_email" type="button" class="btn btn-lg btn-pill btn-primary disabled">
+                                    <span class="icon icon-newsletter"></span> Send Wrap Via Email</button>
+                            </div-->
+                        </li>
+                    </ul>
+                </div>
+                <div id="generated_wraps" class="panel-body">
+                    <hr style="margin-top: -10px;">
+                    <h5 class="m-t-0">Generated Wraps</h5>
+                     <ul id="generated_wrap_list" class="media-list media-list-users list-group modal-body-scroller">
+                    </ul>
+                </div>                
+            </div>
+        </div>
+
+        <div id="login_panel" class="container-fluid container-fill-height">
+            <div class="container-content-middle">
+                <form role="form" class="m-x-auto text-center app-login-form">
+                    <a href="../index.html" class="app-brand m-b-lg">
+                        <img src="assets/img/wander1.png" alt="brand">
+                    </a>
+                    <div class="form-group">
+                        <input id="login_email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group m-b-md">
+                        <input id="login_pass" type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="m-b-lg">
+                        <button id="login_btn" class="btn btn-primary">Log In</button>
+                        <button id="signup_btn" class="btn btn-default">Sign up</button>
+                    </div>
+                    <footer class="screen-login">
+                        <a href="#" class="text-muted" disabled>Forgot password</a>
+                    </footer>
+                </form>
+            </div>
+        </div>
+        <!-- Include jQuery (required) and the JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="dist/toolkit.min.js"></script>
+        <!-- wrapco JavaScript -->
+        <script src="js/wrap-client.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/moment.js"></script>
+        <script type="text/javascript" src="js/underscore-min.js"></script>
+        <script type="text/javascript" src="dist/toolkit.js"></script>
+        <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+    </div>
+</body>
+</html>

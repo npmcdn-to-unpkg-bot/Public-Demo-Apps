@@ -1,0 +1,35 @@
+{
+  "products":
+    [
+      {
+    "product_id" : 1,
+    "product_img" : "https://dl.dropboxusercontent.com/s/gygu6dzd1jyf8hz/1.png",
+    "product_name" : "Galapagos Day Bag",
+    "brand" : "Travel Unlimited",
+    "product_link" : "http://www.cafepress.com/+galapagos_islands_tote_bag,779164186?utm_medium=cpc&utm_term=779164186--c-9031947&utm_source=pla-google&utm_campaign=172674850&utm_content=13672359250",
+    "product_desc" : "A great bag for hiking and biking ",
+    "list_price" : 149,
+    "offer_price" : 134
+  },
+      {
+    "product_id" : 2,
+    "product_img" : "https://dl.dropboxusercontent.com/s/gygu6dzd1jyf8hz/1.png",
+    "product_name" : "Galapagos Day Bag",
+    "brand" : "Travel Unlimited",
+    "product_link" : "http://www.cafepress.com/+galapagos_islands_tote_bag,779164186?utm_medium=cpc&utm_term=779164186--c-9031947&utm_source=pla-google&utm_campaign=172674850&utm_content=13672359250",
+    "product_desc" : "A great bag for hiking and biking ",
+    "list_price" : 149,
+    "offer_price" : 134
+  },
+      {
+    "product_id" : 3,
+    "product_img" : "https://dl.dropboxusercontent.com/s/gygu6dzd1jyf8hz/1.png",
+    "product_name" : "Galapagos Day Bag",
+    "brand" : "Travel Unlimited",
+    "product_link" : "http://www.cafepress.com/+galapagos_islands_tote_bag,779164186?utm_medium=cpc&utm_term=779164186--c-9031947&utm_source=pla-google&utm_campaign=172674850&utm_content=13672359250",
+    "product_desc" : "A great bag for hiking and biking ",
+    "list_price" : 149,
+    "offer_price" : 134
+  }
+    ]
+}

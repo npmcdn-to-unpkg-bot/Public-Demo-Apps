@@ -1,0 +1,16 @@
+Card Templates: 
+	Company				cd3a4ec4-1e8c-4950-ba86-c2e9a61330fc
+	Company: About 		97bad22d-5852-448e-83d4-4a42f214a67f
+	Drug				eaf9e082-3d0f-4001-a3a7-eac42eeff412
+	Drug: How To		f5dfd478-463a-488b-b916-3712fc759b62
+	
+
+Content Categories: 
+	Company				e7ce064e-d299-43ca-9f83-1cf4da88dd4f
+	Company: About		fa15ac93-cf50-46d5-8d64-b48c7d0c88d7
+	Drug 				88f08822-122c-4e5d-96cf-142c96c3ebc7
+	Drug: How To 		7d6311c8-ebae-4aeb-b279-d836554a3a2e
+
+
+
+https://docs.google.com/spreadsheets/d/14i9MuFadsq-pC7cX4kOOQ0MuC1XMAlOvHVKPO8y1UDQ/pub?output=csv

@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <header id="header">
+    </header>
+    <div class="wrapEntry col-xs-12">
+         <div id="uiControls" class="col-sm-12">
+            <div class="col-sm-4 col-sm-offset-8">
+                <input type="text" class="publish col-sm-6" id="sendNumber" placeholder="Phone Number" />
+                <button id="sendBtn" class="publish col-sm-4 col-sm-offset-1">Publish &amp; Send</button>
+            </div>
+        </div>
+
+        <div id="placeholders" class="col-xs-12">
+          
+            <div class="placeholder empty" data-id="">
+                <img class="col-sm-12" src="" />
+                <span></span>
+            </div>
+            <div class="placeholder empty" data-id="">
+                <img class="col-sm-12" src="" />
+                <span></span>
+            </div>
+
+            <div class="placeholder new" data-id="">
+                <img class="col-sm-12" src="img/newCard.png" />
+                <span></span>
+            </div>
+        </div>
+       
+    </div>
+    <div id="alert" class="alert alert-success" role="alert">
+        <div id="alertmsg"></div>
+    </div>    
+    <div id="contentHolder" class="col-sm-12">
+    
+        <div id="column1" class="bin col-sm-3">
+            <div class="category col-sm-12">
+                <h3 class="col-sm-5 col-sm-offset-0">Title</h3>
+                <div class="col-sm-6">
+                    <p>
+                        <input type="text" class="quicksearch" id="column1Search" placeholder="Search" />
+                    </p>
+                </div>
+            </div>
+            <div class="cardHolder col-sm-12">
+            </div>
+        </div>
+
+        <div id="column2" class="bin col-sm-3">
+            <div class="category col-sm-12"> 
+                <h3 class="col-sm-5 col-sm-offset-0">Title</h3>
+                <div class="col-sm-6">
+               
+                    <p col-xs-2>
+                        <input type="text" class="quicksearch" id="column2Search" placeholder="Search" />
+                    </p>
+                </div>
+            </div>
+            <div class="cardHolder col-sm-12">
+            </div>
+        </div>        
+
+        <div id="column3" class=" bin col-sm-3">
+            <div class="category col-sm-12">
+                <h3 class="col-sm-5 col-sm-offset-0">Title</h3>
+                <div class="col-sm-6">
+                    <p >
+                        <input type="text" class="quicksearch" id="column3Search" placeholder="Search" />
+                    </p>
+                </div>
+            </div>
+            <div class="cardHolder col-sm-12">
+            </div>
+        </div>
+
+        <div id="column4" class=" bin col-sm-3">
+            <div class="category col-sm-12">
+                <h3 class="col-sm-5 col-sm-offset-0">Title</h3>
+                <div class="col-sm-6">
+                    <p >
+                        <input type="text" class="quicksearch" id="column4Search" placeholder="Search" />
+                    </p>
+                </div>
+            </div>
+            <div class="cardHolder col-sm-12">
+            </div>
+        </div>        
+
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+    </script>
+    <!-- Latest compiled and minified CSS -->
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script id="cardTemplate" type="text/x-handlebars-template">
+        <div class='smcard col-sm-4' data-id='{{id}}' data-text='{{name}}'>
+            <img class="col-sm-12" src='http://{{preview.medium}}' />
+            </br>
+            <!--<span>{{name}}</span>-->
+        </div>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/utils/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="js/wrap-client.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
